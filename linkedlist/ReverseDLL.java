@@ -18,7 +18,7 @@ public class ReverseDLL {
 		Node head = createDLL();
 		printDLL(head);
 		System.out.println("\nPrinting linked list in reverse order");
-		reverseDLL(head);
+		printInReverseOrder(head);
 	}
 
 	private static void printDLL(Node head) {
@@ -33,7 +33,7 @@ public class ReverseDLL {
 		}
 	}
 	
-	private static void reverseDLL(Node head) {
+	private static void printInReverseOrder(Node head) {
 		if(head == null) {
 			System.out.println("Empty List");
 		} else {
@@ -46,6 +46,15 @@ public class ReverseDLL {
 				current = current.prev;
 			} while(current != null);
 		}
+	}
+	
+	private static void reverseDLL(Node head) {
+		if(head == null) {
+			System.out.print("Empty List");
+		} else {
+			
+		}
+		
 	}
 
 	private static Node createDLL() {
