@@ -28,7 +28,7 @@ public class InsertionLL {
 			do {
 				System.out.print(head.data+" ");
 				head = head.next;
-			} while(head.next != null);
+			} while(head != null);
 		}
 		
 	}
@@ -50,24 +50,26 @@ public class InsertionLL {
 
 	private static Node insertAtPosition(Node head, int data, int pos) {
 		Node newNode = new Node(data);
-		int count = 0;
+		int count = 1;
 		Node current = head;
-		while(count < pos - 1) {
+		while(count < pos -1) {
+			count ++;
 			current = current.next;
 		}
-		newNode.next = current.next.next;
+		
+		newNode.next = current.next;
 		current.next = newNode;
+		
 		return head;
 	}
 
 	private static Node insertAtTheEnd(Node head, int data) {
 		Node newNode = new Node(data);
 		Node current = head;
-		while(current != null) {
+		while(current.next != null) {
 			current = current.next;
 		}
-		
-		current = newNode;
+		current.next = newNode;
 		return head;
 	}
 
