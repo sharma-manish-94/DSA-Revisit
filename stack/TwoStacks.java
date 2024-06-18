@@ -60,7 +60,4 @@ public class TwoStacks {
 		System.out.println(twoStacks.pop1());
 		System.out.println(twoStacks.pop2());
 	}
-	
-	
-
 }
